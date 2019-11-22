@@ -1,6 +1,13 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css";
 
+
+/*Declaração de variavel no CSS*/
+:root {
+    --primary-color: #7159c1;
+}
+
+
 body {
     height: 100vh;
     background-color: #efefef;
@@ -24,7 +31,7 @@ body {
 }
 
 h4 {
-    color: #7159c1;
+    color: var(--primary-color);
     font-size: 20px;
     font-weight: bold;
     margin: 0;
@@ -35,11 +42,33 @@ h4 {
 }
 
 .card-image {
-    background: url("https://placehold.it/500") no-repeat center / cover ;
+    background: url("https://placehold.it/500") no-repeat center center / cover;
     height: 200px;
 }
 
 audio {
     width: 100%;
     margin-top: 30px;
+}
+
+#play-pause {
+    background-color: var(--primary-color);
+}
+
+#vol {
+    color: var(--primary-color);
+    transform: translateY(2px);
+}
+
+/*Para alterar a cor do controle de volume e audio, deve ser feito para cada navegador 
+que deve ser suportado*/
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--primary-color);
+}
+input[type="range"]::-moz-range-thumb {
+    background-color: var(--primary-color);
+}
+input[type="range"]::-ms-thumb {
+    background-color: var(--primary-color);
 }
